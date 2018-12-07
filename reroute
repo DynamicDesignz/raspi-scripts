@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Enter Host: ~$ "
+read host
+echo "Enter Accept/Reject: "
+read status
+sudo route add -host $host $status
+ping $host

@@ -1,0 +1,9 @@
+cd Downloads;
+sudo cp tor-browser-gnu-linux-i686-2.2.39-1-dev-en-US.tar.gz /opt/;
+cd /opt;
+sudo tar -xvf tor-browser-gnu-linux-i686-2.2.39-1-dev-en-US.tar.gz;
+sudo rm -rf tor-browser-gnu-linux-i686-2.2.39-1-dev-en-US.tar.gz;
+sudo chmod 777 tor-browser_en-US/;
+sudo ln -s /opt/tor-browser_en-US/start-tor-browser /usr/bin/tor-browser;
+echo Program Executed!
+PAUSE

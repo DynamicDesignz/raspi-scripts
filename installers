@@ -1,0 +1,12 @@
+sudo apt-get install -y filezilla;
+sudo apt-get install -y apache2;
+sudo apt-get install -y putty;
+sudo apt-get install -y sshd;
+sudo apt-get install -y openssh-server;
+#sudo apt-get install -y bind9;
+#sudo apt-get install -y sbackup;
+#sudo apt-get install -y smbind;
+sudo apt-get install -y nmap;
+#sudo apt-get install -y ;
+#sudo apt-get -y install grsync;
+

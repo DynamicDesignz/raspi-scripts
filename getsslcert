@@ -1,0 +1,3 @@
+apt-get -y install python-letsencrypt-apache
+
+# letsencrypt --apache -d example.com

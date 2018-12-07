@@ -1,0 +1,20 @@
+#!/bin/bash
+
+wget https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0.tar.gz -O /usr/local/lib/ruby-2.4.0.tar.gz
+sudo tar -xzvf ruby-2.4.0.tar.gz
+git clone https://github.com/DynamicDesignz/rubygems.git
+git clone https://github.com/DynamicDesignz/json.git
+
+gem 'bundler', '~> 1.14', '>= 1.14.3'
+gem 'json', '~> 2.0', '>= 2.0.3'
+
+./configure
+make
+sudo make install
+
+
+apt-get -y install build-essential zlib1g zlib1g-dev libxml2 libxml2-dev libxslt-dev locate libreadline6-dev libcurl4-openssl-dev git-core libssl-dev libyaml-dev openssl autoconf libtool ncurses-dev bison curl wget postgresql postgresql-contrib libpq-dev libapr1 libaprutil1 libsvn1 libpcap-dev
+
+
+apt-get install git-core postgresql curl ruby2.4.0 nmap gem
+gem install wirble sqlite3 bundler

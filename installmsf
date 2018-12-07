@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "======================="
+echo "METAPSLOIT AUTO-INSTALL"
+echo "======================="
+
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo apt-get -y install oracle-java8-installer
+
+sudo apt-get install build-essential libreadline-dev libssl-dev libpq5 libpq-dev libreadline5 libsqlite3-dev libpcap-dev git-core autoconf postgresql pgadmin3 curl zlib1g-dev libxml2-dev libxslt1-dev xtightvncviewer libyaml-dev curl zlib1g-dev ruby subversion libpcap-dev ruby-bundler
+
+sudo gem install bundler
+sudo gem install sqlite3
+bundle install
+
+cd /opt
+sudo git clone https://github.com/rapid7/metasploit-framework.git
+sudo chown -R `whoami` /opt/metasploit-framework
+
+cd /opt/metasploit-framework
+sudo gem install bundler
+bundle install
+
+sudo -s
+su postgres
+createuser msf -P -S -R -D
+createdb -O msf msf
+exit
+
+./msfconsole

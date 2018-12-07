@@ -1,0 +1,18 @@
+ 0 down vote accepted
+	
+
+Welcome to Ask Ubuntu Daniel! Here's what you need to do:
+
+    Open a terminal. To do so, hit Ctrl+Alt+T.
+    Type cd /home/daniel/Downloads/. This command will go to that folder (i.e. change our working directory to that folder).
+    Type sudo chmod +x metasploit-latest-linux-installer.run. Enter your password when asked. This command makes the file executable, so that you can "install" it.
+    Type sudo ./metasploit-latest-linux-installer.run. This command will run the file.
+
+Wait a bit, and you should see the Metasploit screen come up and continue with the installation.
+
+EDIT: thanks to Leopoldo Pla's answer:
+
+Once the installation is done, you can update metasploit using the command sudo msfupdate...this can take some time though. Once it's done, you can fire up the metsploit framework console using the command sudo msfconsole.
+
+Enjoy the exploiting!
+

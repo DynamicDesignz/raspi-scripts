@@ -1,0 +1,7 @@
+
+
+gnome-terminal -x alsamixer		#terminal with alsamixer displayed
+gnome-terminal --tab --tab --tab	#a terminal with three open tabs
+gnome-terminal --geometry 80x20		#terminal 80 characters by 20 lines
+gnome-terminal --zoom=2			#terminal with larger font
+

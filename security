@@ -1,0 +1,85 @@
+echo Install Security Tools;
+
+sudo apt-get install -y hydra;
+sudo apt-get install -y hydra-gtk;
+sudo apt-get install -y snort;
+sudo apt-get install -y john;
+sudo apt-get install -y rkhunter;
+sudo apt-get install -y wireshark;
+sudo apt-get install -y putty;
+sudo apt-get install -y tiger;
+sudo apt-get install -y ratproxy;
+sudo apt-get install -y skipfish;
+sudo apt-get install -y lsat;
+sudo apt-get install -y lynis;
+sudo apt-get install -y setools;
+sudo apt-get install -y knocker;
+sudo apt-get install -y checksecurity;
+sudo apt-get install -y harden-tools;
+sudo apt-get install -y tiger-otheros;
+sudo apt-get install -y zenmap;
+sudo apt-get install -y spikeproxy;
+sudo apt-get install -y adminer;
+sudo apt-get install -y netwox;
+sudo apt-get install -y tinyproxy;
+sudo apt-get install -y netwox-doc;
+sudo apt-get install -y yasat;
+sudo apt-get install -y opensmtpd;
+sudo apt-get install -y tcpspy;
+sudo apt-get install -y pdfcrack;
+sudo apt-get install -y xprobe;
+sudo apt-get install -y pyrit;
+sudo apt-get install -y harden;
+sudo apt-get install -y gamin;
+sudo apt-get install -y mz;
+sudo apt-get install -y irpas;
+sudo apt-get install -y ftp-proxy;
+sudo apt-get install -y nessus;
+sudo apt-get install -y acunetix;
+
+
+
+
+
+echo Install Security Tools;
+
+sudo apt-get install -y hydra;
+sudo apt-get install -y hydra-gtk;
+sudo apt-get install -y snort;
+sudo apt-get install -y john;
+sudo apt-get install -y rkhunter;
+sudo apt-get install -y wireshark;
+sudo apt-get install -y putty;
+sudo apt-get install -y tiger;
+sudo apt-get install -y ratproxy;
+sudo apt-get install -y skipfish;
+sudo apt-get install -y lsat;
+sudo apt-get install -y lynis;
+sudo apt-get install -y setools;
+sudo apt-get install -y knocker;
+sudo apt-get install -y checksecurity;
+sudo apt-get install -y harden-tools;
+sudo apt-get install -y tiger-otheros;
+sudo apt-get install -y zenmap;
+sudo apt-get install -y spikeproxy;
+sudo apt-get install -y adminer;
+sudo apt-get install -y netwox;
+sudo apt-get install -y tinyproxy;
+sudo apt-get install -y netwox-doc;
+sudo apt-get install -y yasat;
+sudo apt-get install -y opensmtpd;
+sudo apt-get install -y tcpspy;
+sudo apt-get install -y pdfcrack;
+sudo apt-get install -y xprobe;
+sudo apt-get install -y pyrit;
+sudo apt-get install -y harden;
+sudo apt-get install -y gamin;
+sudo apt-get install -y mz;
+sudo apt-get install -y irpas;
+sudo apt-get install -y ftp-proxy;
+sudo apt-get install -y nessus;
+
+
+
+
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -n "Enter Package Names:$> "
+read VAR1
+
+sudo apt-get -y install $VAR1

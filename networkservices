@@ -1,0 +1,107 @@
+echo "Installing Default Services...";
+echo "==============================";
+# sudo apt-get -y install dhcpcd-gtk
+sudo apt-get -y install dhcpdump
+sudo apt-get -y install dhcping 
+sudo apt-get -y install dnsmasq
+sudo apt-get -y install pxe 
+sudo apt-get -y install ipxe
+#sudo apt-get -y install ipxe-qemu 
+sudo apt-get -y install yersinia
+sudo apt-get -y install totd
+
+sudo apt-get -y install wikto
+sudo apt-get -y install w3af
+sudo apt-get -y install amap
+sudo apt-get -y install wapiti
+sudo apt-get -y install dmitry
+sudo apt-get -y install dnswalk
+sudo apt-get -y install dnsmap
+sudo apt-get -y install dnmap
+sudo apt-get -y install dnsenum
+sudo apt-get -y install bbqsql
+sudo apt-get -y install dirb
+sudo apt-get -y install dirbuster
+sudo apt-get -y install fimap
+sudo apt-get -y install sqlninja
+sudo apt-get -y install sqlsus
+sudo apt-get -y install skipfish
+sudo apt-get -y install vega
+sudo apt-get -y install wfuzz
+sudo apt-get -y install xsser
+sudo apt-get -y install zaproxy
+sudo apt-get -y install urlcrazy
+sudo apt-get -y install wireshark
+sudo apt-get -y install sslstrip
+sudo apt-get -y install sslsplit
+sudo apt-get -y install p0f
+sudo apt-get -y install masscan
+sudo apt-get -y install fierce
+sudo apt-get -y install corkscrew
+sudo apt-get -y install iodine
+sudo apt-get -y install bind9
+
+
+#sudo apt-get -y install pump
+#sudo apt-get -y install isc-dhcp-client
+#sudo apt-get -y install isc-dhcp-client-dbg
+#sudo apt-get -y install isc-dhcp-common
+#sudo apt-get -y install isc-dhcp-dbg
+#sudo apt-get -y install isc-dhcp-dev
+#sudo apt-get -y install isc-dhcp-relay
+#sudo apt-get -y install isc-dhcp-server 
+#sudo apt-get -y install nmap
+#sudo apt-get -y install ftpd
+#sudo apt-get -y install wireshark
+#sudo apt-get -y install terminator
+#sudo apt-get -y install yakuake
+#sudo apt-get -y install fritzing
+#sudo apt-get -y install arduino
+#sudo apt-get -y install arduino-core
+#sudo apt-get -y install bluez
+#sudo apt-get -y install bluez-firmware
+#sudo apt-get -y install bluetooth
+#sudo apt-get -y install blueman
+#sudo apt-get -y install bluez-tools
+#sudo apt-get -y install nautilus
+#sudo apt-get -y install synaptic
+sudo apt-get -y install pdns-recursor pdns-backend-mydns  pdns-backend-pgsql pdns-backend-remote pdnsd
+sudo apt-get -y install zip
+sudo apt-get -y install testdisk
+sudo apt-get -y install synaptic
+sudo apt-get -y install nautilus
+sudo apt-get -y install locate
+ 
+sudo apt-get -y install nikto
+sudo apt-get -y install w3af
+sudo apt-get -y install sqlmap
+sudo apt-get -y install ettercap-text-only
+sudo apt-get -y install hydra-gtk
+sudo apt-get -y install hping
+sudo apt-get -y install hping3
+
+sudo apt-get -y install shellinabox
+
+cd /var/www/html
+wget https://www.bro.org/downloads/bro-2.5.tar.gz
+unzip bro-2.5.tar.gz
+cd
+
+echo "Intalling Linux Dependencies"
+sudo apt-get install build-essential ruby-dev libpcap-dev
+gem install bettercap
+
+
+sudo apt-get -y install nmap
+sudo apt-get -y install pure-ftp
+sudo apt-get -y install openssh-server
+
+sudo apt-get -y install packetfence
+
+sudo apt-get -y install php5 libapache2-mod-php5
+sudo apt-get -y install mysql-server php5-mysql
+sudo apt-get -y install apache2
+
+sudo /etc/init.d/apache2 restart
+sudo chown pi -R /var/www/html
+sudo rm /var/www/html/index.html

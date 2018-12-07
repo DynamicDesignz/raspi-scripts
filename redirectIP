@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Redirect SSH Network Traffic"
+
+echo "Enter Source IP: ~$ "
+read source
+echo "Enter ReRoute Dest. IP ~$ "
+read dest
+iptables -t nat -A PREROUTING -s $source -p tcp --dport 22 -j DNAT --to-destination $dest:22
+echo "Re-Routed Source IP $source OnPort:22 to --> $dest OnPort: 22"
+ 

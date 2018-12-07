@@ -1,0 +1,16 @@
+echo "Downloading PacketStorm Security Tools"
+echo "======================================"
+
+wget https://packetstormsecurity.com/files/download/139405/tinc-1.0.30.tar.gz
+wget https://packetstormsecurity.com/files/download/139406/raptor_waf-0.3.tar.gz
+wget https://packetstormsecurity.com/files/download/139364/aiengine-1.6.tar.gz
+wget https://packetstormsecurity.com/files/download/139358/falco-0.4.0.tar.gz
+wget https://packetstormsecurity.com/files/download/139308/ufonet-v0.8.tar.gz
+wget https://packetstormsecurity.com/files/download/140389/truffleHog-master.zip -O TruffleHog.zip
+wget https://packetstormsecurity.com/files/download/140037/DAVOSET_v.1.2.9.rar
+wget https://packetstormsecurity.com/files/download/139939/evilgrade-2.0.8.tar.gz
+wget https://packetstormsecurity.com/files/download/139870/Mobile-Security-Framework-MobSF-0.9.3.zip
+wget https://packetstormsecurity.com/files/download/136648/SnappingTurtle_0.1.0411.1609.zip
+wget https://packetstormsecurity.com/files/download/135929/xsser_1.7-1.tar.gz
+wget https://packetstormsecurity.com/files/download/135837/CJExploiter-1.0.0.zip
+
