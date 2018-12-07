@@ -1,0 +1,35 @@
+Backing Up Files with rsync
+A more feature-rich command for doing backups is rsync. What makes rsync so
+unique is the rsync algorithm, which compares the local and remote files one small
+block at a time using checksums, and only transfers the blocks that are different. This
+algorithm is so efficient that it has been reused in many backup products.
+The rsync command can work either on top of a remote shell (ssh), or by running
+an rsyncd daemon on the server end. The following example uses rsync over ssh to
+mirror a directory:
+$ rsync -avz --delete chris@server1:/home/chris/pics/ chrispics/
+The command just shown is intended to mirror the remote directory structure (/home/
+chris/pics/) on the local system. The -a says to run in archive mode (recursively
+copying all files from the remote directory), the -z option compresses the files, and -v
+makes the output verbose. The --delete tells rsync to delete any files on the local
+system that no longer exist on the remote system.
+For ongoing backups, you can have rsync do seven-day incremental backups. Here’s
+an example:
+# mkdir /var/backups
+# rsync --delete --backup
+\
+--backup-dir=/var/backups/backup-`date +%A` \
+-avz chris@server1:/home/chris/Personal/
+\
+/var/backups/current-backup/
+When the command just shown runs, all the files from /home/chris/Personal
+on the remote system server1 are copied to the local directory /var/backups/
+current-backup. All files modified today are copied to a directory named after
+today’s day of the week, such as /var/backups/backup-Monday. Over a week,
+seven directories will be created that reflect changes over each of the past seven days.
+Another trick for rotated backups is to use hard links instead of multiple copies of the files.
+This two-step process consists of rotating the files, then running rsync:
+# rm -rf /var/backups/backup-old/
+# mv /var/backups/backup-current/ /var/backups/backup-old/
+# rsync --delete --link-dest=/var/backups/backup-old -avz \
+chris@server1:/home/chris/Personal/ /var/backups/backup-current/
+

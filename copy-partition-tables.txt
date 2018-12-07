@@ -1,0 +1,6 @@
+$ sudo sfdisk –d /dev/sda > sda-table
+Back up partition table to file
+$ sudo sfdisk /dev/sda < sda-table
+Restore partition table from file
+$ sudo sfdisk –d /dev/sda | sfdisk /dev/sdb Copy partition table from disk to disk
+

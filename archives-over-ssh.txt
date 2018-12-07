@@ -1,0 +1,38 @@
+Backing Up tar Archives Over ssh
+OpenSSH (www.openssh.org/) provides tools to securely do remote login, remote
+execution, and remote file copy over network interfaces. By setting up two machines
+to share encryption keys, you can transfer files between those machines without
+entering passwords for each transmission. That fact lets you create scripts to back up
+your data from an SSH client to an SSH server, without any manual intervention.
+From a central Linux system, you can gather backups from multiple client machines using
+OpenSSH commands. The following example runs the tar command on a remote
+site (to archive and compress the files), pipes the tar stream to standard output, and
+uses the ssh command to catch the backup locally (over ssh) with tar:
+$ mkdir mybackup ; cd mybackup
+$ ssh francois@server1 ‘tar cf - myfile*’ | tar xvf -
+francois@server1’s password: ******
+myfile1
+myfile2
+In the example just shown, all files beginning with myfile are copied from the home
+directory of francois on server1 and placed in the current directory. Note that the left
+side of the pipe creates the archive and the right side expands the files from the archive
+to the current directory. (Keep in mind that ssh will overwrite local files if they exist,
+which is why we created an empty directory in the example.)
+To reverse the process and copy files from the local system to the remote system, we run a local
+tar command first. This time, however, we add a cd command to put the files in the
+directory of our choice on the remote machine:
+$ tar cf - myfile* | ssh francois@server1 \
+‘cd /home/francois/myfolder; tar xvf -’
+francois@server1’s password: ******
+myfile1
+myfile2
+In this next example, we’re not going to untar the files on the receiving end, but
+instead write the results to tgz files:
+$ ssh francois@server1 ‘tar czf - myfile*’ | cat > myfiles.tgz
+$ tar cvzf - myfile* | ssh francois@server1 ‘cat > myfiles.tgz’
+The first example takes all files beginning with myfile from the francois user’s home
+directory on server1, tars and compresses those files, and directs those compressed
+files to the myfiles.tgz file on the local system. The second example does the reverse
+by taking all files beginning with myfile in the local directory and sending them to a
+myfiles.tgz file on the remote system.
+

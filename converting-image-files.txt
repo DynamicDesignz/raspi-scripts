@@ -1,0 +1,39 @@
+Converting Images
+The convert command is a Swiss Army knife of file converters. Here are some ways
+to manipulate images using the convert command. The following examples convert
+image files from one format to another:
+$ convert tree.jpg tree.png
+$ convert icon.gif icon.bmp
+$ convert photo.tiff photo.pcx
+Convert a JPEG to a PNG file
+Convert a GIF to a BMP file
+Convert a TIFF to a PCX file
+Image types that convert supports include .jpg, .bmp, .pcx, .gif, .png, .tiff, .xpm, and
+.xwd. Here are examples of convert being used to resize images:
+$ convert -resize 1024x768 hat.jpg hat-sm.jpg
+$ convert -sample 50%x50% dog.jpg dog-half.jpg
+The first example creates an image (hat-sm.jpg) that is 1024 × 768 pixels. The second
+example reduced the image dog.jpg in half (50%x50%) and saves it as dog-half.jpg.
+You can rotate images from 0 to 360 degrees. Here are examples:
+$ convert -rotate 270 sky.jpg sky-final.jpg
+$ convert -rotate 90 house.jpg house-final.jpg
+Rotate image 270 degrees
+Rotate image 90 degrees
+You can add text to an image using the -draw option:
+$ convert -fill black -pointsize 60 -font helvetica
+-draw ‘text 10,80 “Copyright NegusNet Inc.”’
+\
+p10.jpg p10-cp.jpg
+\
+The previous example adds copyright information to an image, using 60 point black
+Helvetica font to write text on the image. The text is placed 10 points in and 80 points
+down from the upper left corner. The new image name is p10-cp.jpg, to indicate that
+the new image had copyright information added.
+Here are some interesting ways to create thumbnails with the convert command:
+$ convert -thumbnail 120x120 a.jpg a-a.png
+$ convert -thumbnail 120x120 -border 8 a.jpg a-b.png
+$ convert -thumbnail 120x120 -border 8 -rotate 8 a.jpg a-c.png
+All three examples create a 120 × 120–pixel thumbnail. The second adds the -border
+option to put a border around the thumbnail, so it looks like a Polaroid picture. The
+last example rotates the image. Figure 6-1 shows the results of these three examples.
+

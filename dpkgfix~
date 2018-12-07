@@ -1,0 +1,2 @@
+sudo dpkg-reconfigure --all
+

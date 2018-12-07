@@ -1,0 +1,6 @@
+#!/bin/bash
+
+tiger
+rkhunter
+tripwire
+chrootkit

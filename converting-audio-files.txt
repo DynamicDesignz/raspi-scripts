@@ -1,0 +1,22 @@
+Converting Audio Files
+The sox utility is an extremely versatile tool for working with audio files in different
+freely available formats. Here are a few examples of things you can do with sox:
+The following command concatenates two WAV files to a single output file:
+$ sox head.wav tail.wav output.wav
+This command mixes two WAV files:
+$ soxmix sound1.wav sound2.wav output.wav
+To use sox to display information about a file, use the stat effect as follows:
+$ sox sound1.wav -e stat
+Samples read:
+208512
+Length (seconds):
+9.456327
+Scaled by:
+2147483647.0
+Maximum amplitude:
+0.200592
+Minimum amplitude:
+-0.224701
+Midline amplitude:
+-0.012054
+

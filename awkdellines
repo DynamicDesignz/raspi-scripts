@@ -1,0 +1,2 @@
+#Delete lines 4-10 in filename
+sed '4,10d'filename

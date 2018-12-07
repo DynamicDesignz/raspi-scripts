@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Check Firewall Host Connection: ~$ "
+read host
+telnet $host 80

